@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Report</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script src="js/myscript.js"></script>
+
+</head>
+
+<body ng-app="MyApp" ng-controller="MyCtrl">
+    <div class="container">
+        <div class="jumbotron py-3">
+            <img src="img/covid19-on-economy.jpg" style="height: 100px;width: 100px; border-radius: 920px; display: block;
+            margin-left: auto;
+            margin-right: auto;">
+            <h4 class="text-center">{{title}}</h4>
+            <a href="/Home/Index"><h4 class="text-center">Back Home </h4></a>
+            <p class="pt-3" style="margin-top: -26px;">
+                Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+                Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without
+                special treatment.These droplets are too heavy to hang in the air, and quickly fall on floors
+                or surfaces.
+                You can be infected by breathing in the virus.
+            </p>
+            <!--<button ng-click="changeValue()"> Home </button>
+            <br>
+            <br>-->
+            <!-- all data -->
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="card bg-warning text-white">
+                        <div class="card-body">
+                            <h4>Confirmed Cases </h4>
+                            <h4>{{all_data.confirmed.value}}</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h4>
+                                Recovered Cases
+                            </h4>
+                            <h4>{{all_data.recovered.value}}</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <h4>
+                                Death Cases
+                            </h4>
+                            <h4>{{all_data.deaths.value}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- end all data -->
+
+            <input type="text" class="form-control mt-4" placeholder="Enter country here" ng-model="c" ng-change="get_c_data()" />
+            <!--{{c}}-->
+            <!--country data-->
+            <div class="container-fluid" ng-if="c_data">
+                <h4 class="text-center mt-4 text-uppercase">
+                    {{c}} Status</h2>
+                    <div class="row text-center mt-4">
+                        <div class="col-md-4">
+                            <div class="card bg-warning text-white">
+                                <div class="card-body">
+                                    <h4>Confirmed Cases </h4>
+                                    <h4>{{c_data.confirmed.value}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-success text-white">
+                                <div class="card-body">
+                                    <h4>
+                                        Recovered Cases
+                                    </h4>
+                                    <h4>{{c_data.recovered.value}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-danger text-white">
+                                <div class="card-body">
+                                    <h4>
+                                        Death Cases
+                                    </h4>
+                                    <h4>{{c_data.deaths.value}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!--end country data-->
+        </div>
+    </div>
+</body>
+
+</html>
